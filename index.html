@@ -5,29 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    .item1 { grid-area: header; }
-    .item2 { grid-area: footer; }
-    
-    .grid-container {
-      display: grid;
-      grid-template-areas:
-        'header header header header header header'
-        
-        'footer footer footer footer footer footer';
-      grid-gap: 10px;
-      background-color: #2196F3;
-      padding: 10px;
-    }
-    
-    .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 20px 0;
-      font-size: 30px;
-    }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 
     
     
@@ -38,9 +18,48 @@
 
 </head>
 <body>
-    <div calss="grid-container">
+    <div class="grid-container">
 
-      <header class="item1">
+      <header class="item-grid header">
+        <div class="modal" id="modal"> 
+          <div class="modal-backdrop"></div> 
+          <div class="modal-body"> 
+           <button id="close"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
+           <div class="langauge"><i class="fa  fa-language" style="font-size:40px; color: red;"></i></div>
+          <nav>
+             <ul>
+
+               <li>Sing Up</li>
+               <li>Login</li>
+               <li>Main</li>
+               <li>Contact Us</li>
+               <li>Help</li>
+               <li>Yemen </li>
+             </ul>
+          </nav>
+          
+         
+         
+        </div>
+       </div>
+      <div class="container-flex-header">  
+       <div class="container-icon-menu">
+        <button id="open"> <i class="fa  fa-bars" style="font-size:20px; color: red;"></i></button>
+       </div>
+        
+       <div class="container-logo">
+         <img src="images/logo.svg">
+
+       </div>
+       <div class="search">
+            <input type="text" placeholder="search">
+            <span><i class="fa  fa-shopping-cart" style="font-size:25px; color: red;"></i></span>
+            
+       </div>
+        
+      </div>
+        
+        <!--
           <nav>
               nav
           </nav>
@@ -48,11 +67,166 @@
           <div>search</div>
 
           <div>logo</div>
+          -->
 
       </header>
-      <footer class="item2">footer</footer>       
+      <div class="item-grid slidar">
+        slidar
+      </div>
+
+      <div class="item-grid catigroy">
+        browse by catigroy
+      </div>
+
+      <div class="item-grid ads">
+        advirdais
+      </div>
+
+      <div class="item-grid current-display">
+        current-display
+      </div>
+      
+      <div class="item-grid book-d">
+        book dina
+      </div>
+
+      <div class="item-grid book-tarih">
+        book history
+      </div>
+      
+      <div class="item-grid book-policy">
+        book policy
+      </div>
+
+      <div class="item-grid book-ecomerce">
+        book ecomerce
+      </div>
+       
+      <div class="item-grid book-cook">
+        book cook
+
+      </div>
+
+      <div class="item-grid book-love">
+       book love
+      </div>
+      
 
 
-    </div>
+      
+
+      <footer class="item-grid footer">
+       <div class="container-footer">
+        <div class="itemfooter subscrip">
+          <div class="head-subscrip">Joining To Our Email</div> 
+          <input type="text" placeholder="Your Email Address">
+          <input type="submit">
+        </div>
+
+        <div class="itemfooter customer-care">
+          <div class=" phone-div">CUSTOMER-CARE
+            <div class="hide-phone-dive">
+         
+             <p><a herf="#">Corporate Sales</a> </p>
+             <p><a herf="#">FAQ</a> </p>
+             <p><a herf="#">Shopping Guide & Publications</a> </p>
+             <p><a herf="#">Showroom Locator</a> </p>
+             <p><a herf="#">Warranty Policy</a> </p>
+             <p><a herf="#">Return & Exchange</a> </p>
+             <p><a herf="#">Return & Exchange</a> </p>
+             <p><a herf="#"> Contact Us > 920000089</a> </p>
+
+            </div>
+
+          </div>  
+        </div>
+
+        <div class="itemfooter servece"> JARIR SERVICES 
+
+          <div class="hide-servece">
+            Jarir Tickets
+           
+            
+            
+            
+            
+            
+            
+            <p><a herf="#"> Jarir Tickets</a> </p>
+            <p><a herf="#"> Installment Service</a> </p>
+            <p><a herf="#">Total Protection Service</a> </p>
+            <p><a herf="#">Showroom Locator</a> </p>
+            <p><a herf="#">Extended Warranty Service</a> </p>
+            <p><a herf="#">Jarir Discount Card</a> </p>
+            <p><a herf="#">Jarir Gift Card</a> </p>
+            
+          </div>
+        </div>
+        <div class="itemfooter quick-link"> QUICK LINKS
+         
+
+
+
+          <div class="hide-quick-start">
+            <p><a herf="#">  Jarir Publications</a> </p>
+            <p><a herf="#"> Jarir Reader</a> </p>
+            <p><a herf="#">Reward Program Partners</a> </p>
+            <p><a herf="#">Telecom Services</a> </p>
+          </div>
+          
+        
+        
+        </div>
+        <div class="itemfooter "> ABOUT JARIR 
+         
+          
+          
+         
+        
+          <div class="hide-about">
+            <p><a herf="#">  Who We Are</a> </p>
+            <p><a herf="#"> Corporate Governance</a> </p>
+            <p><a herf="#">Investors Relations and Reports</a> </p>
+            <p><a herf="#">Sustainability</a> </p>
+            <p><a herf="#"> News</a> </p>
+            <p><a herf="#">  JOB OPPORTUNITIES </a> </p>
+
+          </div>
+        </div>
+        <div class="itemfooter footer-icon-container">
+           <div>FOLLOW JARIR </div>
+           <div class="icon-contact">
+           <i class="fa fa-laptop-code" style="font-size:20px;"></i>
+           <i class="fab  fa-google" style="font-size:20px;"></i>
+           <i class="fab  fa-facebook-f" style="font-size:20px;"></i>
+           <i class="	fab  fa-twitter" style="font-size:20px;"></i>
+           <i class="fab  fa-facebook-f" style="font-size:20px;"></i>
+           </div>
+        </div>
+        
+      </div> <!--end container footer div-->
+       <hr>
+      <div class="info-footer">
+        <div class="way-paid">
+          <i class="fab  fa-cc-visa"></i>
+          <i class="fab  fa-cc-mastercard"></i>
+          <i class="fab  fa-cc-stripe"></i>
+          <i class="fab  fa-cc-amazon-pay"></i>
+        </div> 
+        <div class="crypt">
+          <p>Privacy Policy Terms of Service</p>
+          <p>Copyright © 2015. Jarir Bookstore. C. R. No. 1010032264. Online C. R. No. 1010654213 All Rights Reserved.</p>
+        </div>
+
+
+      </div>
+      
+      </footer>       
+
+
+  </div> <!--end container grid-->
+ <script src="js/index.js">
+
+ </script>  
 </body>
 </html>
