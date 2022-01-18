@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-
+  
     
     
     
@@ -17,19 +17,77 @@
 
 
 </head>
-<body>
+<body onload="myFunction()">
     <div class="grid-container">
 
+
       <header class="item-grid header">
+        <div id="model-sign-up" >
+          <div class="modal-backdrop"></div> 
+           <div id="modal-body-sign-up">
+            <button id="close-sing-up"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
+             <h2>Create Account </h2> 
+            <form>
+                  
+
+              <select >
+                <option><span> </span> <span>+970</span></option>
+                <option><span> </span> <span>+970</span></option>
+                <option><span> </span> <span>+970</span></option>
+
+              </select>
+
+                 <input id="input-number" type="text" placeholder="Number">
+                
+                 <br> 
+                 <label>will send the ckeck number by message number</label><br>
+                 <input  type="submit" placeholder="">
+                 <br>
+                 
+                 <input type="text" placeholder="YOUR NAME FRIST">
+                 <br>
+                 
+                 <input type="text" placeholder="YOUR NAME FAMILY">
+                 <br>
+
+                 <input type="text" placeholder="YOUR EMAIL">
+                 <br>
+
+                 <input type="text" placeholder="YOUR SURE EMAIL">
+                 <br>
+
+                 <input type="text" placeholder="YOUR PASSWORD">
+                 <br>
+                 <label>I Understand and OK </label> 
+                 <input  class="checkbox-sing-up" type="checkbox" checked >
+                 <br>
+
+                 <label>I Understand and OK </label> 
+                 <input class="checkbox-sing-up" type="checkbox" checked >
+                 <br>
+                 <input type="submit" >
+
+               
+
+             </form>
+
+
+           </div>
+
+        </div>
+
         <div class="modal" id="modal"> 
           <div class="modal-backdrop"></div> 
           <div class="modal-body"> 
            <button id="close"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
            <div class="langauge"><i class="fa  fa-language" style="font-size:40px; color: red;"></i></div>
+           <!--modal sing-up-->
+            
+
           <nav>
              <ul>
 
-               <li>Sing Up</li>
+               <li id="sing-up">Sing Up</li>
                <li>Login</li>
                <li>Main</li>
                <li>Contact Us</li>
@@ -48,7 +106,7 @@
        </div>
         
        <div class="container-logo">
-         <img src="images/logo.svg">
+         <img src="images/logo.jpg">
 
        </div>
        <div class="search">
@@ -73,23 +131,115 @@
       <div class="item-grid slidar">
         <div id="slider">
           <figure>
-              <img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp">
-              <img src="images/MB-ksa-2212-formula1-cb-ar.webp">
-              <img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp">
+             <div> <img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp"></div>
+             <div> <img src="images/MB-ksa-2212-formula1-cb-ar.webp"></div>
+              <div><img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp"></div>
           </figure>
       </div>
       </div>
 
       <div class="item-grid catigroy">
-        browse by catigroy
+          <h2>browse by catigroy </h2>
+           <div class="container-catigroy-box">
+              <div class="catigroy-box">
+              <img src="images/svgexport-39.svg">
+                <p>Smart TV</p>
+              </div>
+
+              <div class="catigroy-box">
+                <img src="images/svgexport-41.svg">
+                <p>Smart TV</p>
+              </div>
+
+              <div class="catigroy-box">
+                <img src="images/svgexport-42.svg">
+                <p>Smart TV</p>
+              </div>
+
+              <div class="catigroy-box">
+                <img src="images/svgexport-39.svg">
+                  <p>Smart TV</p>
+                </div>
+  
+                <div class="catigroy-box">
+                  <img src="images/svgexport-41.svg">
+                  <p>Smart TV</p>
+                </div>
+  
+                <div class="catigroy-box">
+                  <img src="images/svgexport-42.svg">
+                  <p>Smart TV</p>
+                </div>
+                <div class="catigroy-box">
+                  <img src="images/svgexport-42.svg">
+                  <p>Smart TV</p>
+                </div>
+  
+
+              
+              
+              
+
+           </div>
       </div>
 
       <div class="item-grid ads">
-        advirdais
+          <div class="adver">
+            <img src="images/ad1.webp" width="200">
+          </div>
+
+          <div class="adver">
+            <img src="images/ad2.webp" width="200">
+          </div>
+
+          <div class="adver">
+            <img src="images/ad3.webp" width="200">
+          </div>
+
+          <div class="adver">
+            <img src="images/ad4.webp" width="200">
+          </div>
+
+          <div class="adver">
+            <img src="images/ad5.webp"width="200">
+          </div>
+
+          <div class="adver">
+            <img src="images/ad6.webp" width="200">
+          </div>
       </div>
 
       <div class="item-grid current-display">
-        current-display
+        phone offer
+        <div class="offer-item">
+          <img src="images/offer1.jpg">
+          <p>Name thing</p>
+          <p>price : 50 RS</p>
+          <p class="offer" data-offer="jan 25 ,2022 00:00:00">offer : </p>
+        </div>
+         
+        <div class="offer-item">
+          <img src="images/offer2.jpg">
+          <p>Name thing</p>
+          <p>price : 50 RS</p>
+          <p class="offer" data-offer="jan 20 ,2022 00:00:00">offer : </p>
+        </div>
+
+        <div class="offer-item">
+          <img src="images/offer3.jpg">
+          <p>Name thing</p>
+          <p>price : 50 RS</p>
+          <p class="offer" data-offer="jan 24 ,2022 00:00:00">offer : </p>
+        </div>
+
+        <div class="offer-item">
+          <img src="images/offer4.jpg">
+          <p>Name thing</p>
+          <p>price : 50 RS</p>
+          <p class="offer" data-offer="jan 25 ,2022 00:00:00">offer : </p>
+        </div>
+
+
       </div>
       
       <div class="item-grid book-d">
