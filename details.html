@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Details</title>
+</head>
+<body>
+
+    <div class="grid-container">
+
+
+        <header class="item-grid header">
+          <div id="model-sign-up" >
+            <div class="modal-backdrop"></div> 
+             <div id="modal-body-sign-up">
+              <button id="close-sing-up"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
+               <h2>Create Account </h2> 
+              <form>
+                    
+  
+                <select >
+                  <option><span> </span> <span>+970</span></option>
+                  <option><span> </span> <span>+970</span></option>
+                  <option><span> </span> <span>+970</span></option>
+  
+                </select>
+  
+                   <input id="input-number" type="text" placeholder="Number">
+                  
+                   <br> 
+                   <label>will send the ckeck number by message number</label><br>
+                   <input  type="submit" placeholder="">
+                   <br>
+                   
+                   <input type="text" placeholder="YOUR NAME FRIST">
+                   <br>
+                   
+                   <input type="text" placeholder="YOUR NAME FAMILY">
+                   <br>
+  
+                   <input type="text" placeholder="YOUR EMAIL">
+                   <br>
+  
+                   <input type="text" placeholder="YOUR SURE EMAIL">
+                   <br>
+  
+                   <input type="text" placeholder="YOUR PASSWORD">
+                   
+                   <div class="container-checkbox">
+                   <input  class="checkbox-sing-up" type="checkbox" checked >
+                   <label>I Understand and OK </label> 
+                   
+                   <br>
+                   <input class="checkbox-sing-up" type="checkbox" checked >
+                   <label>I Understand and OK </label> 
+                   </div>
+                   
+                   <input type="submit" >
+  
+                 
+  
+               </form>
+  
+  
+             </div>
+  
+          </div>
+  
+          <div class="modal" id="modal"> 
+            <div class="modal-backdrop"></div> 
+            <div class="modal-body"> 
+             <button id="close"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
+             <div class="langauge"><img src="images/svgexport-14.svg"></div>
+             <!--modal sing-up-->
+              
+  
+            <nav>
+               <ul>
+  
+                 <li id="sing-up">Sing Up</li>
+                 <li>Login</li>
+                 <li>Main</li>
+                 <li>Contact Us</li>
+                 <li>Help</li>
+                 <li>Yemen </li>
+               </ul>
+            </nav>
+            
+           
+           
+          </div>
+         </div>
+        <div class="container-flex-header">  
+         <div class="container-icon-menu">
+          <button id="open"> <i class="fa  fa-bars" style="font-size:20px; color: red;"></i></button>
+         </div>
+          
+         <div class="container-logo">
+           <img src="images/logo.jpg">
+  
+         </div>
+         <div class="search">
+              <input type="text" placeholder="search">
+              <span><img src="images/svgexport-50.svg"></span>
+              
+         </div>
+          
+        </div>
+        
+  
+        </header>
+
+        <div class="item-grid slidar">
+           
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="images/MB-ksa-2212-formula1-cb-ar.webp" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="images/MB-ksa-1001-b2s-2022-banners-ar1.webp" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+
+        </div>
+        <div class="item-grid  book">
+         
+
+          <div class="path">
+              <span>Main</span>
+              <span> > Araic Books </span>
+              <span> > Electronic  Books </span>
+              <span> > Name of Books </span>
+          </div>
+          <div class="container-books">
+            <div class="image-book">
+
+                <img id="myImg" src="images/book-offer2.jpg" alt="Snow" style="width:100%;max-width:300px">
+                <img id="myImg2" src="images/books-offer.jpg" alt="Snow" style="width:100%;max-width:300px; display: none;">
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <a class="prev" onclick="showImgeBooks(-1)">&#10094;</a>
+                <a class="next" onclick="showImgeBooks(1)">&#10095;</a>
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption"></div>
+                  
+                </div>
+
+            </div>
+             <div class="details-books" > details vook</div>
+             <div class="buy-book">buy book</div>
+
+          </div>
+
+        </div>
+
+        <div class="item-grid  info-book" >
+            decripe book
+        </div>
+
+        <div class="item-grid  review-customer">
+            review customer
+        </div>
+
+        <div class="item-grid product-simlar">
+
+            product simlar
+        </div>
+        
+        
+</div>
+<script src="js/detail.js"></script>
+</body>
+</html>

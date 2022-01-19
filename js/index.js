@@ -21,7 +21,7 @@ var button = document.getElementById('open');
 
  });
  var close_sing_up = document.getElementById('close-sing-up');
- close.addEventListener('click', function (event) { 
+ close_sing_up.addEventListener('click', function (event) { 
     event.preventDefault(); 
     model_sing_up.style.display = 'none';
  });
