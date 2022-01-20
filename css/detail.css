@@ -1,5 +1,8 @@
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+body {
+  font-family: Verdana, sans-serif; margin:0;
+  direction: rtl;
+}
 
 /* navgition style */
 .header { grid-area: header; }
@@ -300,6 +303,13 @@ width: 20%;
   .container-books 
   {
       display: flex;
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+  }
+  #add-shoping
+  {
+    width: 61%;
   }
   .image-book .modal{
     position: fixed;
@@ -378,7 +388,16 @@ width: 20%;
   text-decoration: none;
   cursor: pointer;
 }
-
+.number-book
+{
+  width: 31%;
+}
+.buy-book p
+{
+  border-right: 9px solid #b3b30d;
+    padding-right: 9px;
+    background-color: #f7e6d1;
+}
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
   .modal-content {
@@ -473,4 +492,33 @@ margin: -2px;
        padding: 10px;
        margin-right: 15px;
        border-radius: 19px;
+   }
+   .image-book{
+    width: 40%;
+    text-align: center;
+    border: solid 1px #ccc;
+            box-shadow: 1px 2px 5px rgb(0 0 0 / 31%);
+            border-radius: 8px;
+            padding-top: 15px;
+   }
+   .show-mor img{
+    width: 2%;
+    
+   }
+   .left-book {
+     text-align: left;
+   }
+   .choose-book{
+      position: relative;
+   }
+   .choose-book .price{
+  position: absolute;
+  left: 1px;
+
+   }
+   .buy-book {
+    width: 36%;
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgb(0 0 0 / 31%);
+    border-radius: 8px;
    }
