@@ -12,36 +12,7 @@
 </head>
 <body>
     <div id="container-body-checkout">
-         <div class="calclution">
-            <div class="total">
-                <span> total </span>
-                <span class="number-total">68.97 </span>
-                
-
-            </div>
-
-            <div class="Payment-costs" >
-                <span> Payment costs</span> <span class="span-payment"> free</span>
-
-
-            </div>
-             
-             <div class="all-total">
-                <span class="span-grand">The grand total is </span> <span class="span-tax"> including tax</span>
-                <span class="grand-total">68.97</span>
-
-             </div>
-             
-             <div class="finish-shopping">
-                 <p>
-                    By clicking on finish shopping, you agree to <span>the terms and conditions of the privacy policy</span>
-                 </p>
-                 <button onclick="finishShoping();"> finish shopping  </button>
-
-             </div>
-
-
-         </div>
+         
          <div class="info-sell">
             <div class="container-prodect">
                 <div class="info-product">
@@ -59,21 +30,21 @@
 
                     </div>
                     <div class="price-product">
-                        <span> 3.99 </span>
+                       <p> <span class="price-data" id="price1" data-price="5"> 5 </span> <span>ر.س</span></p>
 
                     </div>
                      
                 </div>
                 <hr>
               <div class="quntity-product">
-                 <input type="text" >
-                 <input type="button" value="-">
-                 <input id="mins-quentity" type="button" value="+">
+                 <input type="text" data-price="price1">
+                 <input type="button"  onclick="quentity(this,'-')" value="-" >
+             <input id="mins-quentity" onclick="quentity(this,'+')" type="button" value="+">
                  
                   
               </div>
               <div id="delete">
-                  <img src="images/cancel-1.svg">
+                  <img class="delete-prodect" src="images/cancel-1.svg">
                   <span>حذف</span>
               </div>
             </div>
@@ -86,7 +57,7 @@
           <div class="container-prodect">
             <div class="info-product">
                 <div class="image-product" >
-                   <img src="images/checkout-images-book.jpg">
+                   <img  src="images/checkout-images-book.jpg">
                 </div>
                 <div class="details-product">
                     <p class="name-product">البداية والنهاية الجزء الاول</p>
@@ -99,21 +70,21 @@
 
                 </div>
                 <div class="price-product">
-                    <span> 3.99 </span>
+                    <p><span class="price-data" id="price2" data-price="4.99"> 4.99 </span><span>ر.س</span></p>
 
                 </div>
                  
             </div>
             <hr>
           <div class="quntity-product">
-             <input type="text" >
-             <input type="button" value="-">
-             <input id="mins-quentity" type="button" value="+">
+             <input type="text" data-price="price2" >
+             <input type="button"  onclick="quentity(this,'-')" value="-"  >
+             <input id="mins-quentity" onclick="quentity(this,'+')" type="button" value="+">
              
               
           </div>
           <div id="delete">
-              <img src="images/cancel-1.svg">
+              <img class="delete-prodect" src="images/cancel-1.svg">
               <span>حذف</span>
           </div>
         </div>
@@ -137,29 +108,70 @@
 
                 </div>
                 <div class="price-product">
-                    <span> 3.99 </span>
+                    <p><span  class="price-data" id="price3" data-price="3.99"> 3.99 </span> <span>ر.س</span></p>
 
                 </div>
                  
             </div>
             <hr>
           <div class="quntity-product">
-             <input type="text" >
-             <input type="button" value="-">
-             <input id="mins-quentity" type="button" value="+">
+             <input type="text"  data-price="price3" >
+             <input type="button"  onclick="quentity(this,'-')" value="-" >
+             <input id="mins-quentity" onclick="quentity(this,'+')" type="button" value="+">
              
               
           </div>
           <div id="delete">
-              <img src="images/cancel-1.svg">
+              <img class="delete-prodect" src="images/cancel-1.svg">
               <span>حذف</span>
           </div>
         </div>
            
           <!--end book three-->
 
-         </div>
+          <div id="modal-delete" style="display: none;">
+             <div class="head-delete"> رسالة تاكيد الحذف </div>
+             <div class="body-delete"> هل تريد حذف المنتج  </div>
+             <div >
+               <button id="ok" onclick="deleteProdect();">موافق</button>
+               <button id="concel">الغاء</button>
+             </div>
 
+          </div>
+
+         </div>
+          
+
+         <div class="calclution">
+          <div class="total">
+              <span> المجموع  </span>
+              <p><span id="total-price" class="number-total">68.97 </span><span>ر.س</span></p>
+              
+
+          </div>
+
+          <div class="Payment-costs" >
+              <span> تكاليف الشحن</span> <span class="span-payment"> مجاني</span>
+
+
+          </div>
+           
+           <div class="all-total">
+              <span class="span-grand">المجموع الكلي </span> <span class="span-tax"> شامل الضربية</span>
+              <span class="grand-total">68.97 ر.س</span>
+
+           </div>
+           
+           <div class="finish-shopping">
+               <p>
+                  بالضغط على انهاء التسوق فانت توافق <span>على الشروط والاحكام سياسة الخصوصية</span>
+               </p>
+               <button onclick="finishShoping();"> انهاء التسوق  </button>
+
+           </div>
+
+
+       </div>
     </div>
 
    <!--start stepper-->
@@ -177,27 +189,27 @@
     <div id="user-information">
         
       <div class="main-block">
-        <h1>User information </h1>
+        <h1>ادخل بيانات الشخصية  </h1>
         <form action="/">
       
-          <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
-          <input type="text" name="name" id="name" placeholder="Email" required/>
+          <label id="icon" for="name"></label>
+          <input type="text" name="name" id="name" placeholder="ادخل الايميل " required/>
           <label id="icon" for="name"><i class="fas fa-user"></i></label>
-          <input type="text" name="name" id="name" placeholder="Name" required/>
+          <input type="text" name="name" id="name" placeholder="ادخل اسمك الثلاثي" required/>
           <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
-          <input type="text" name="name" id="name" placeholder="phone-number" required/>
+          <input type="text" name="name" id="name" placeholder="ادخل رقم الهاتف" required/>
           <label id="icon" for="country"><i class="fas fa-unlock-alt"></i></label>
           <select id="country"  > 
-            <option selected >Yemen</option>
-            <option>Asodia</option>
+            <option selected >اليمن </option>
+            <option>السعودية</option>
             
           </select>
           <hr>
           <div class="gender">
             <input type="radio" value="none" id="male" name="gender" checked/>
-            <label for="male" class="radio">Male</label>
+            <label for="male" class="radio">دكر</label>
             <input type="radio" value="none" id="female" name="gender" />
-            <label for="female" class="radio">Female</label>
+            <label for="female" class="radio">انثى</label>
           </div>
           
         </form>
@@ -208,7 +220,7 @@
    <!--payment information ->step tow  -->
   <div id="payment-information" style="display: none;"> 
    <div class="main-block">
-    <h1>Registration</h1>
+    <h1>ادخل بيانات الدفع</h1>
     <form action="/">
     
       <label id="icon" for="name"><i class="fas fa-envelope"></i></label>
@@ -279,8 +291,9 @@
    <!--end the done operation-->
 
     <div class="btns">
-      <button class="js-previews-btn">Previews Step</button>
-      <button class="js-next-btn">Next step</button>
+      <button class="js-next-btn">التالي</button>
+      <button class="js-previews-btn">السابق</button>
+      
     </div>
 
   </div>  

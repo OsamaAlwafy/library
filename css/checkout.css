@@ -1,4 +1,9 @@
-
+*{
+  direction: rtl;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 
 /*  style container body of checkout */
 
@@ -6,6 +11,12 @@
     display: flex;
     column-gap: 20px;
  
+}
+@media screen and (max-width:780px) {
+  #container-body-checkout{
+    display: block;
+  }
+  
 }
 .info-sell , .calclution{
     
@@ -21,14 +32,21 @@ height: 42vh;
     border: solid 1px #ccc;
 
 }
+@media screen and (max-width:780px) {
+ .calclution {
+    width: 98%;
+  }
+  
+}
+
 .total,.Payment-costs ,.all-total{
     position: relative;
     padding-bottom: 8px;
 }
-.total .number-total ,.Payment-costs .span-payment,.all-total .grand-total{
+  .Payment-costs .span-payment,.all-total .grand-total{
     color: red;
     position: absolute;
-    right: 1px;
+   left:1px
 }
 .Payment-costs .span-payment
 {
@@ -37,6 +55,9 @@ height: 42vh;
 
 .finish-shopping{
     margin-top: 14%;
+}
+.finish-shopping >p>span{
+  color: #1c87c9;
 }
 .finish-shopping button{
     width: 100%;
@@ -49,6 +70,12 @@ height: 42vh;
 .info-sell {
 direction: rtl;
 width: 60%;
+}
+@media screen and (max-width:780px) {
+  .info-sell{
+    width: 98%;
+  }
+  
 }
 .container-prodect {
     position: relative;
@@ -80,31 +107,48 @@ width: 60%;
     position: relative;
     width: 20%;
 }
-.price-product span {
-    position: absolute;
-    left: 1px;
-    color: red;
-    font-weight: bold;
-    font-size: 20px;
+.price-product p ,.total p {
+  position: absolute;
+  left: 0px;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+.total p{
+  display: inline-block;
 }
 .name-product{
     font-size: 20px;
     margin-top: 0px;
 }
 .way-deliver{
-    border-right: 9px solid #b3b30d;
-    padding-right: 9px;
-    background-color: #f7e6d1;
+  border-right: 9px solid #b3b30d;
+  padding-right: 9px;
+  background-color: #f7e6d1;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  font-size: 15px;
+  margin-top: 6px;
 }
+
 .card-product{
     opacity: 0.5;
     font-style: italic;
 }
 .quntity-product{
     position: absolute;
-    left: -20px;
-    bottom: 33px;
+    left: 1px;
+    bottom: 11px;
 }
+@media screen and(max-width:780px) {
+  .quntity-product{
+    left: -25px;
+    bottom: 11px;
+}
+
+  }
+  
+
 .quntity-product input[type=text]
 {       text-align: center;
     width: 20px;
@@ -134,7 +178,33 @@ width: 60%;
     right: 5px;
     bottom: 2px;
 }
+
+/* modol delete */
+#modal-delete
+{
+  padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgb(0 0 0 / 31%);
+    border: solid 1px #ccc;
+    position: absolute;
+    height: auto;
+    width: 80%;
+    z-index: 3;
+    background-color: #ffffff;
+}
+#ok,#concel{
+  width: 45%;
+  display: inline-block;
+}
 /* start stepper */
+@media screen and (min-width:760px) {
+  #modal-delete{
+    width: 50%;
+    margin: auto;
+  }
+  
+}
 
 
 
@@ -162,6 +232,15 @@ width: 60%;
     justify-content: space-between;
     align-items: center;
   }
+  @media screen and (min-width:750px) {
+    .step-wrapper{
+      width: 40%;
+      margin-top: 4rem;
+      margin-bottom: 10px;
+
+    }
+    
+  }
 
   .step__item {
     display: flex;
@@ -177,25 +256,32 @@ width: 60%;
   }
 
   .step__item.is-active {
-    background-color: rebeccapurple;
+    background-color: #339939;
     color: var(--text-active-color);
     font-weight: 600;
 
-    box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--active-color);
+    
   }
 
-  .step__item.is-active:not(:last-of-type)::after {
+  .step__item.is-active::before {
     background-color: var(--active-color);
   }
 
-  .step__item:not(:last-of-type)::after {
+  .step__item:not(:first-of-type)::before {
     content: '';
     position: absolute;
     transform: translateX(50%);
-    width: calc(100vw / 5);
+    width: calc(80vw/ 4);
     height: 4px;
     background-color: var(--color);
     z-index: -1;
+  }
+  @media screen and (min-width:750px) {
+    .step__item:not(:first-of-type)::before{
+      transform: translateX(57%);
+      width: calc(40vw/ 4);
+    }
+    
   }
 
   .btns {
@@ -234,13 +320,23 @@ width: 60%;
   }
   .main-block {
     width: 77vw;
-  min-height: 460px; 
+  
   padding: 10px 0;
+  text-align: center;
   margin: auto;
   border-radius: 5px; 
   border: solid 1px #ccc;
   box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
   background: #ebebeb; 
+  }
+  @media screen and (min-width:750px) {
+    .main-block{
+      width:40%;
+    }
+    .btns button{
+      width: auto;
+    }
+    
   }
   form {
   margin: 0 30px;
@@ -338,6 +434,13 @@ width: 60%;
         box-shadow: 1px 2px 5px rgb(0 0 0 / 31%);
         border-radius: 8px;
     }
+
+    @media screen and (min-width:760px) {
+      #confirm-operation{
+        width: 56vw;
+      }
+      
+    }
   .container-confirm
   { direction: rtl;
     padding: 12px;
@@ -396,6 +499,12 @@ text-decoration: underline;
     padding: 12px;
     border-radius: 10px;
    
+}
+@media screen and (min-width:780px) {
+  #done-operation{
+    width: 56%;
+  }
+  
 }
   
   .head-confirm-panel{

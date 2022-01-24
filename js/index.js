@@ -3,11 +3,12 @@ var button = document.getElementById('open');
  var modal = document.getElementById('modal');
  button.addEventListener('click', function (event) { 
  event.preventDefault(); 
- modal.style.display = 'block'; 
+ modal.setAttribute("class","modal-show");
+ modal.classList.replace("modal","modal-show");
  }); 
  close.addEventListener('click', function (event) { 
  event.preventDefault(); 
- modal.style.display = 'none'; 
+ modal.classList.replace("modal-show","modal");
  });
 
  
@@ -28,7 +29,60 @@ var button = document.getElementById('open');
 
  
 
+// slidar implementation
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
  //alert(update);
+ /* swich between login and sign up*/
+ /*go from sign up to login*/
+ let go_account= document.getElementById("go-account");
+ let login=document.getElementById("login-parent");
+ go_account.addEventListener("click",function(e){
+  
+   model_sing_up.style.display="none";
+   login.style.display="block";
+
+
+ })
+ /*go from login to sign up*/
+ let createAccount=document.getElementById("create-account");
+ createAccount.addEventListener("click",function(e)
+ {
+   model_sing_up.style.display="block";
+   login.style.display="none";
+ });
+ /* close login and return to index page body*/
+ var closeLogin = document.getElementById('close-login');
+ closeLogin.addEventListener('click', function (event) { 
+    event.preventDefault(); 
+    login.style.display = 'none';
+ });
+
  
 function calculateOffer()
 {
@@ -49,7 +103,7 @@ function calculateOffer()
      const remainMin= Math.floor((diffTime%hours)/min);
      const remainSecond= Math.floor((diffTime%min)/sec);
 
-     x[i].innerHTML ="offer : Day s :"+remainDay +" Hours : "+remainHours +"Min : "+remainMin +" seconds : "+remainSecond;
+     x[i].innerHTML =remainDay +"ايام  - "+remainHours +"  ساعات - "+remainMin +" ودقائق- "+remainSecond +"ثواني";
     }
 }
  function myFunction()

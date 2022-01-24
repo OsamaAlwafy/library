@@ -152,6 +152,15 @@
         </div>
         <div class="item-grid  book">
          
+           <!-- The Modal -->
+           <div id="myModal" class="modal">
+            <a class="prev" onclick="showImgeBooks(-1)">&#10094;</a>
+        <a class="next" onclick="showImgeBooks(1)">&#10095;</a>
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+          <div id="caption"></div>
+          
+        </div>
 
           <div class="path">
               <span> الرائسية</span>
@@ -166,18 +175,15 @@
           <div class="container-books">
             <div class="image-book">
 
-                <img id="myImg" src="images/because.jpg" alt="Snow" style="width:100%;max-width:300px">
-                <img id="myImg2" src="images/because.jpg" alt="Snow" style="width:100%;max-width:300px; display: none;">
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                    <a class="prev" onclick="showImgeBooks(-1)">&#10094;</a>
-                <a class="next" onclick="showImgeBooks(1)">&#10095;</a>
-                  <span class="close">&times;</span>
-                  <img class="modal-content" id="img01">
-                  <div id="caption"></div>
-                  
+                <img id="myImg" src="images/because.jpg" alt="لانك انت اللة" style="width:100%;max-width:300px">
+                <div class="small-images">
+                  <img id="myImg-small" src="images/because.jpg" alt="لانك انت اللة" style="width:30px">
+                  <img id="myImg2-small2" src="images/book5.jpg" alt="لانك انت اللة" style="width:30px">
                 </div>
+                
+                <img id="myImg2" src="images/book5.jpg" alt="كتاب لانك انت الله" style="width:100%;max-width:300px; display: none;">
+
+               
 
             </div>
              <div class="details-books" > 
@@ -187,7 +193,7 @@
                    <img src="images/svgexport-51.svg">
 
                  </p>
-                 <p>12.99 ر.س</p>
+                 <p class="price">12.99 ر.س</p>
 
                </div>
                <div class="left-book">
@@ -197,7 +203,7 @@
                   <img src="images/svgexport-2.svg">
                   <img src="images/svgexport-2.svg">
                   <img src="images/svgexport-2.svg">
-                  <span>(15)مراجعات</span>
+                  <span class="num-start">(15)مراجعات</span>
                   <p class="info-cat">
                     <span>رقم الصنف</span>
                     <span>JBB410156</span>
@@ -234,25 +240,221 @@
                       <button id="add-shoping"> اضافة الى السلة</button>
 
                    </div>
+                   <div class="feature">
+                      
+                     <div class="feature-one">
+                        <p>تسوق امن </p>
+                     </div>
+
+                     <div class="feature-tow">
+                      <p>اصلي ومضمون</p>
+                   </div>
+
+                   <div class="feature-three">
+                    <p>شحن سريع ومجاني</p>
+                 </div>
+                      <hr>
+                   </div>
+                  <div class="choose">
+                    <div>
+                      <span>مشاركة</span>
+                    </div>
+
+                    <div>
+                      <span>المفضلة</span>
+                    </div>
+
+                    <div>
+                      <span>مقارنة</span>
+                    </div>
+
+                  </div> 
                   
 
              </div>
 
           </div>
-
+        <div class="container-para-desc">
+          <p>كتاب يتحدث عن اسماء اللة الحسنى وكيف نعيشها في حياتنا حرص المولف ان يكون الكتاب مناسبا لمن هم متوسطين الثقافة
+            ويكون مناسبا للمحتاج والمريض والسليم
+          </p>
+        </div>
         </div>
 
         <div class="item-grid  info-book" >
-            decripe book
+           <h3>المواصفات </h3>
+           <p>
+             <span>رقم الصنف</span> <span class="info-book-details"><b>JBB410156</b></span>
+             <hr>
+           </p>
+
+           <p>
+            <span>رقم المنتج</span> <span class="info-book-details"><b>4</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>المولف</span> <span class="info-book-details"><b>علي جابر الفيفي</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>الناشر</span> <span class="info-book-details"><b>دار الحضاره للنشر والتوزيع</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>تاريخ النشر</span> <span class="info-book-details"><b>2016</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>صيغة الكتاب</span> <span class="info-book-details"><b>Ebook</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>عدد الصفحات</span> <span class="info-book-details"><b>182</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>وزن الشحن</span> <span class="info-book-details"><b>0.0100</b></span>
+            <hr>
+          </p>
+
+          <p>
+            <span>صيغة الملف </span> <span class="info-book-details"><b>epub</b></span>
+            <hr>
+          </p>
+
+
+          <p>
+            <span>اللغة </span> <span class="info-book-details"><b>عربي</b></span>
+            <hr>
+          </p>
+
+          
         </div>
 
         <div class="item-grid  review-customer">
-            review customer
+            <div class="container-review">
+                <div class="add-review-container">
+                  <span><b>مراجعات العملاء</b></span>
+                  <button>
+                    +اكتب مراجعتك
+                  </button>
+                  
+                </div>
+                <div class="container-single-review">
+                  <div class="head-review">
+                     <p><b> good </b></p>
+                    </div>
+                     <div class="info-review">
+                       <span class="name-persone-review"> من قبل ريم</span>
+                       <span class="date-review">16/11/2021</span>
+                     </div>
+                      <div class="body-review">
+                        <p>good</p>
+                      </div>
+                  </div>
+
+                  <div class="container-single-review">
+                    <div class="head-review">
+                       <p><b> كتاب رائع </b></p>
+                       </div>
+                       <div class="info-review">
+                         <span class="name-persone-review"> من قبل خالد ابو جميلة</span>
+                         <span class="date-review">25/11/2021</span>
+                       </div>
+                        <div class="body-review">
+                          <p>جميل جدا</p>
+                        </div>
+                    </div>
+
+
+                    <div class="container-single-review">
+                      <div class="head-review">
+                         <p><b> لامك اللة </b></p>
+                         </div>
+                         <div class="info-review">
+                           <span class="name-persone-review"> من قبل باسل</span>
+                           <span class="date-review">26/11/2021</span>
+                         </div>
+                          <div class="body-review">
+                            <p>جميل جدا ومفيد</p>
+                          </div>
+                      </div>
+
+                </div>
+
+            </div>
         </div>
 
         <div class="item-grid product-simlar">
+          <p> </p>
+          <div class="container-product-simlar">
+                <div class="book-simlar">
+                  <img src="images/book1.jpg">
+                  <p>الصلاة وحكم تاركها</p>
+                  <p>15رس</p>
 
-            product simlar
+                </div>
+              
+         
+
+        
+            <div class="book-simlar">
+              <img src="images/book1.jpg">
+              <p>الصلاة وحكم تاركها</p>
+              <p>15رس</p>
+
+            </div>
+          
+
+
+
+      
+        <div class="book-simlar">
+          <img src="images/book1.jpg">
+          <p>الصلاة وحكم تاركها</p>
+          <p>15رس</p>
+
+        </div>
+      
+ 
+
+
+
+    <div class="book-simlar">
+      <img src="images/book1.jpg">
+      <p>الصلاة وحكم تاركها</p>
+      <p>15رس</p>
+
+    </div>
+
+
+
+
+  <div class="book-simlar">
+    <img src="images/book1.jpg">
+    <p>الصلاة وحكم تاركها</p>
+    <p>15رس</p>
+
+  </div>
+
+
+
+  <div class="book-simlar">
+    <img src="images/book1.jpg">
+    <p>الصلاة وحكم تاركها</p>
+    <p>15رس</p>
+
+  </div>
+
+
+</div>
+          
         </div>
         
         

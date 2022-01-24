@@ -65,6 +65,9 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
+var imageSmall1=document.getElementById("myImg-small");
+var imageSmall2=document.getElementById("myImg-small2");
+
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
@@ -78,16 +81,16 @@ function showImgeBooks(n)
         var img2 =document.getElementById("myImg2");
         var imageShow=document.getElementById("img01");
          imageShow.setAttribute("src",img.getAttribute("src"));
-        img.style.display="none";
-         img2.style.display="block";
+         imageSmall1.style
+       
+         
     }
     else {
         var img =document.getElementById("myImg");
         var img2 =document.getElementById("myImg2");
         var imageShow=document.getElementById("img01");
         imageShow.setAttribute("src",img2.getAttribute("src"));
-        img.style.display="block";
-         img2.style.display="none";
+        
     }
 }
 
