@@ -30,23 +30,27 @@ var button = document.getElementById('open');
  
 
 // slidar implementation
+
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides();
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex =slideIndex+n;
+  showSlides();
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex=n;
+  showSlides();
+  
 }
 
-function showSlides(n) {
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
@@ -57,9 +61,18 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+setInterval(()=>{
+  slideIndex++;
+  showSlides();
+
+},3000);
+
  //alert(update);
  /* swich between login and sign up*/
  /*go from sign up to login*/
+ 
+
+ 
  let go_account= document.getElementById("go-account");
  let login=document.getElementById("login-parent");
  go_account.addEventListener("click",function(e){
@@ -110,4 +123,28 @@ function calculateOffer()
  {
     setInterval(calculateOffer, 1000);
      
+ }
+ // multi langauge in javascrip
+ function langfun(language){
+   
+   if(language=="ar")
+   {
+     var arbic=document.getElementById("ar");
+     var english=document.getElementById("en");
+     arbic.style.display="none";
+     english.style.display="block";
+     english.style.textAlign="left";
+    
+   }
+   else
+   {
+    var arbic=document.getElementById("ar");
+    var english=document.getElementById("en");
+    arbic.style.display="block";
+    english.style.display="none";
+    arbic.style.textAlign="right";
+
+   }
+
+
  }

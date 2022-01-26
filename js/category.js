@@ -53,3 +53,46 @@ for(let i=0 ;i<basketElement.length ;i++)
 
   });
 }
+/* fillter by price slider */
+var isDown=false;
+var offset = [0,0];
+var diff=0;
+var showValuePrice=document.getElementById("show-price");
+
+let silderRight=document.getElementById("slider-right");
+//alert(silderRight.getBoundingClientRect().left);
+let farway=silderRight.offsetLeft;
+var persentageprice=150/farway;
+let parent=document.getElementsByClassName("price-range")[0];
+parent.addEventListener('mousedown', function(e) {
+
+   //farway=silderRight.offsetLeft;
+  
+  isDown = true;
+  offset = [
+    -silderRight.getBoundingClientRect().left + e.clientX,
+    silderRight.offsetTop - e.clientY
+  ];
+}, true);
+
+document.addEventListener('mouseup', function() {
+  isDown = false;
+}, true);
+
+silderRight.addEventListener('mousemove', function(event) {
+  
+  event.preventDefault();
+   
+  if (isDown &&silderRight.offsetLeft>=0 && silderRight.offsetLeft<=farway) {
+    diff=farway-silderRight.offsetLeft;
+    showValuePrice.innerText=diff*persentageprice
+      mousePosition = {
+           
+          x : event.clientX,
+          y : event.clientY
+
+      };
+      silderRight.style.right = ( diff+offset[0]) + 'px';
+      //silderRight.style.top  = (mousePosition.y + offset[1]) + 'px';
+  }
+}, true);
