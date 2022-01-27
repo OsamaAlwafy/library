@@ -1,14 +1,18 @@
 
 const book = new Map();
+const bookResult=new Map();
 
 var hideBooksContainer=document.getElementById("books");
 // return all books with details in page
 const elementbook=document.getElementsByClassName("book-offer");
+console.log(elementbook);
 //var input="المعيلة";
 
 // div we set all element of result search
-let result_search =document.getElementById("result-serach");
+let result_search =document.getElementsByClassName("result")[0];
 let textInputSearch=document.getElementById("search-field");
+let empty_search=document.getElementById("empty-search");
+
 for(var i=0 ; i<elementbook.length;i++)
 {
     var name_book =elementbook[i].children[2].innerText;
@@ -19,20 +23,35 @@ for(var i=0 ; i<elementbook.length;i++)
 textInputSearch.addEventListener("keyup", function(e){
   if(e.code=="Enter")
   {
+    result_search.style.display="block";
+    empty_search.style.display="none";
       searchfun();
   }
 });
 
 function searchfun()
 {
-
+var flag=0;
 hideBooksContainer.style.display="none";
 book.forEach (function(value, key) {
+       console.log(value);
        if(key==textInputSearch.value)
-        {
+        {   flag=1;
+             
              result_search.appendChild(elementbook[value]);
-        }  
+             console.log("key"+ key);
+             
+             bookResult.set(key,value);
+        }
+        
   });
+  if(flag==0)
+        {
+          empty_search.style.display="block";
+           return;
+        }
+        result_search.style.width="auto";
+        console.log(bookResult);  
 }
 
 
@@ -77,6 +96,7 @@ parent.addEventListener('mousedown', function(e) {
 
 document.addEventListener('mouseup', function() {
   isDown = false;
+  fulterBooksByPrice();
 }, true);
 
 silderRight.addEventListener('mousemove', function(event) {
@@ -85,7 +105,7 @@ silderRight.addEventListener('mousemove', function(event) {
    
   if (isDown &&silderRight.offsetLeft>=0 && silderRight.offsetLeft<=farway) {
     diff=farway-silderRight.offsetLeft;
-    showValuePrice.innerText=diff*persentageprice
+    showValuePrice.innerText= Math.round(diff*persentageprice);
       mousePosition = {
            
           x : event.clientX,
@@ -96,3 +116,49 @@ silderRight.addEventListener('mousemove', function(event) {
       //silderRight.style.top  = (mousePosition.y + offset[1]) + 'px';
   }
 }, true);
+function fulterBooksByPrice()
+{
+  var price=Number(showValuePrice.innerText);
+  if(price==0)
+    return;
+   book.forEach( 
+    function(value, key) {
+      var bookPrice=elementbook[value].getElementsByClassName("price-book")[0].innerText;
+
+      
+      if(price<bookPrice)
+      {
+
+        elementbook[value].style.display="none";
+      }
+      else{
+        elementbook[value].style.display="block";
+      }
+
+    });
+}
+// sort the search by select option
+
+var select=document.getElementById("oreder-by-book");
+select.addEventListener("change",(e)=>{
+
+  
+var option=select.value;
+if(option="الاسم")
+{
+  var mapAsc = new Map([...book.entries()].sort());
+  result_search.style.display="flex";
+  hideBooksContainer.style.display="none";
+  mapAsc.forEach(function(value,key){
+    
+    result_search.appendChild(elementbook[value]);
+
+
+  });
+
+  
+}
+
+alert(option);
+
+});

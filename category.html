@@ -37,7 +37,7 @@
         <div id="model-sign-up" >
        
            <div id="modal-body-sign-up">
-            <button id="close-sing-up"> X<i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
+            <button id="close-sing-up"> <i class="fa  fa-window-close" style="font-size:20px; color: red;"></i></button>
              <h2>انشاء حساب</h2> 
             <form>
                   
@@ -250,7 +250,7 @@
                           
                           <span class="min-price">0 رس</span>
                           <span class="max-price">150 رس</span>
-                          <div class="show-price-slider"><span id="show-price">100</span></div>
+                          <div class="show-price-slider"><span id="show-price">0</span></div>
                         </div>
 
                       </div>
@@ -266,7 +266,7 @@
               <img src="images/book-offer2.jpg">
               <p>كتاب الكتروني</p>
               <p class="title"> كلي ونامي وابهري الاخرين</p>
-              <span>17.5رس</span>
+              <span class="price-book">20.5</span><span>رس</span>
               <p>صيغ اخرى 
                   <span>كتاب مطبوع</span>
               </p>
@@ -285,7 +285,7 @@
             <img src="images/because.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> لانك اللة </p>
-            <span>19.2رس</span>
+            <span class="price-book">30.5</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -303,7 +303,7 @@
             <img src="images/book2.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> كجثة رواية بولسية</p>
-            <span>19.8.5رس</span>
+            <span class="price-book">10</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -321,7 +321,7 @@
             <img src="images/book5.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> رواية اشواق</p>
-            <span>11.5رس</span>
+            <span class="price-book">50.5</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -340,7 +340,7 @@
             <img src="images/book6.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> المعيلة </p>
-            <span>17.5رس</span>
+            <span class="price-book">70.5</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -361,7 +361,7 @@
             <img src="images/book7.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> رواية كانت لك</p>
-            <span>17.5رس</span>
+            <span class="price-book">5.5</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -376,11 +376,11 @@
          </div>
 
 
-         <div class="book-offer" id="book7">
+         <div class="book-offer" id="">
             <img src="images/book8.jpg">
             <p>كتاب الكتروني</p>
             <p class="title"> الفتوحات العربية في روايات المغلوين</p>
-            <span>17.5رس</span>
+            <span class="price-book">120.5</span><span>رس</span>
             <p>صيغ اخرى 
                 <span>كتاب مطبوع</span>
             </p>
@@ -394,31 +394,23 @@
 
          </div>
 
-         <div class="book-offer" id="book5">
-          <img src="images/book6.jpg">
-          <p>كتاب الكتروني</p>
-          <p class="title"> المعيلة </p>
-          <span>17.5رس</span>
-          <p>صيغ اخرى 
-              <span>كتاب مطبوع</span>
-          </p>
-          <p class="offer" data-offer="jan 22, 2022 00:00:00"></p>
-          <div class="icon-under-book">
-            <img src="images/svgexport-56.svg">
-            <img class="add-to-basket" src="images/svgexport-21.svg">
-            <img src="images/svgexport-2.svg">
-
-          </div>
-
-       </div>
-
+       
 
 
             </div>
             
             <div class="result" style="display:none" >
                 <p>نتائج البحث</p>
-                <div id="result-serach">
+                <div id="empty-search" style="display: none;">
+                  
+                  <div class="title"> 
+                    <h3>نتائج البحث</h3>  
+                  </div>
+                  <div class="body">
+                     لا توجد بيانات مطابقة
+                  </div>
+
+                </div>
                     
                 </div>
                   

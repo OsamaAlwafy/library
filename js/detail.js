@@ -1,53 +1,26 @@
 
-// responsive list
-var button = document.getElementById('open');
- var close = document.getElementById('close');
- var modal = document.getElementById('modal');
- button.addEventListener('click', function (event) { 
- event.preventDefault(); 
- modal.style.display = 'block'; 
- }); 
- close.addEventListener('click', function (event) { 
- event.preventDefault(); 
- modal.style.display = 'none'; 
- });
-
- 
- var model_sing_up=document.getElementById("model-sign-up");
- var sinup_bottun=document.getElementById("sing-up");
-
- sinup_bottun.addEventListener("click",function(event){
-     event.preventDefault();
-   //model_sing_up.classList.toggle("is-open");
-   model_sing_up.style.display="block";
-
- });
- var close_sing_up = document.getElementById('close-sing-up');
- close_sing_up.addEventListener('click', function (event) { 
-    event.preventDefault(); 
-    model_sing_up.style.display = 'none';
- });
-
-
 
 // slidar implementation
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides();
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  slideIndex =slideIndex+n;
+  showSlides();
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  slideIndex=n;
+  showSlides();
+  
 }
 
-function showSlides(n) {
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
@@ -57,6 +30,12 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+setInterval(()=>{
+  slideIndex++;
+  showSlides();
+
+},3000);
 
 // Get the modal
 var modal = document.getElementById("myModal");
