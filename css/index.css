@@ -290,6 +290,9 @@
 }
 @media screen and (min-width:750px) {
     modal-body-sign-up
+    {
+        
+    }
     
 }
 #modal-body-sign-up h2{
@@ -606,7 +609,7 @@ left: 1px;
    .itemfooter>p ,.phone-div>p{
        margin-bottom: 5px;
        padding: 10px;
-       border-bottom: 1px solid red;
+      
    }
    .info-footer{
     background: #e6e6e6;
@@ -782,6 +785,10 @@ left: 1px;
        .container-footer
        {
            display: flex;
+           justify-content: space-around;
+}
+
+
        }
        .icon-contact img{
            width: 30px;
