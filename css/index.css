@@ -502,12 +502,16 @@ left: 1px;
     .container-book-offer{
         justify-content:right;
     }
+ 
+
     
 }
 .book-offer{
    
-    border: 1px solid;
+    border: 1px solid rgb(22 21 21 / 40%);
     text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 .book-offer .offer{
     background:#978f8f;
@@ -553,6 +557,16 @@ left: 1px;
     color: red;
     font-size: 19px;
     font-weight: bold;
+}
+.type-book-Catigory
+{
+    padding: 10px;
+    background-color: #eadede;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(42 44 45 / 50%);
 }
 /* start style footer */
    .container-footer{
